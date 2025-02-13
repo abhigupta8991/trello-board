@@ -1,0 +1,32 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid rgba(99, 99, 99, 0.3);
+  padding: 10px;      
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h4 {
+  margin: 0;
+}

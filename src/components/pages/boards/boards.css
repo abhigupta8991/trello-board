@@ -1,0 +1,23 @@
+.board-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  height: calc(100vh - 3rem);
+}
+
+.board-name {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 12px 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #3498db;
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
+}
+
+.empty-board {
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.header-bar {
+  height: 3rem;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  padding: 0px 12px;
+  justify-content: space-between;
+}
+
+.left-items {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.header-links>a {
+  color: #3498db;
+  font-weight: 400;
+}
+
+.header-cta {
+  font-weight: 700;
+  border: 1px solid #c2c2c2;
+  background: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #3498db;
+}
+
+.header-cta>a {
+  color: #3498db;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
