@@ -17,19 +17,19 @@ import './App.css';
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: '/trello-board/',
+      path: '/',
       element: <Header />,
       children: [
         {
-          path: '/login/trello-board/',
+          path: '/login',
           element: <Login />
         },
         {
-          path: '/signup/trello-board/',
+          path: '/signup',
           element: <SignUp />
         },
         {
-          path: '/trello-board/',
+          path: '/',
           element: (
             <PrivateRoute>
               <BoardWrapper />
@@ -37,7 +37,7 @@ const App = () => {
           )
         },
         {
-          path: 'trello-board//projects/*',
+          path: '/projects/*',
           element: (
             <PrivateRoute>
               <ProjectBoard />
