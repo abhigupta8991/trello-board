@@ -38,7 +38,7 @@ const BoardWrapper = () => {
       {
         projects?.map((board, index) => {
           return (
-            <Link to={`/projects?id=${board.id}&name=${board.name}`} state={board} key={index}>
+            <Link to={`/projects`} state={board} key={index}>
               <div className='board-name'>
                   {board.name}
               </div>
@@ -46,9 +46,9 @@ const BoardWrapper = () => {
           )
         })
       }
-      <div className='empty-list empty-board' onClick={() => openModal("board")}>
+      <button className='empty-list empty-board' onClick={() => openModal("board")}>
         + Add new Board 
-      </div>
+      </button>
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}

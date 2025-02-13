@@ -15,13 +15,9 @@ const ProjectBoard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState("list");
 
-  // eslint-disable-next-line no-unused-vars
-  const [searchParams, setSearchParams] = useSearchParams();
-  const id = searchParams.get("id");
-
   useEffect(() => {
-    if (!id) return;
-    const listsRef = ref(db, `projects/${id}/lists`);
+    if (!state.id) return;
+    const listsRef = ref(db, `projects/${state.id}/lists`);
     onValue(listsRef, (snapshot) => {
       if (snapshot.exists()) {
         setLists(Object.entries(snapshot.val()).map(([id, data]) => ({ id, ...data })));
@@ -31,7 +27,7 @@ const ProjectBoard = () => {
     });
 
     return () => off(listsRef);
-  }, [id]);
+  }, [state.id]);
 
   const openModal = (type, listId = null) => {
     setModalType(type);
@@ -49,17 +45,17 @@ const ProjectBoard = () => {
         <div className='project-board'>
           {lists?.map((list) => {
             return (
-              <List list={list} boardId={id} listId={list.id}/>
+              <List list={list} boardId={state.id} listId={list.id}/>
             )
           })}
-          <div className='empty-list' onClick={() => openModal("list", id)}>
+          <button className='empty-list' onClick={() => openModal("list", state.id)}>
             + Add a List
-          </div>
+          </button>
           <Modal
             isOpen={modalOpen}
             onClose={() => setModalOpen(false)}
             type={modalType}
-            boardId={id}
+            boardId={state.id}
             listId={selectedList}
           />
         </div>

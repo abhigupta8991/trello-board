@@ -30,7 +30,7 @@ input, textarea {
   box-sizing: border-box;
 }
 
-button {
+.button {
   margin: 5px;
   padding: 10px;
   border: none;

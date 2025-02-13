@@ -57,6 +57,8 @@
   padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 
 .add-card:hover {
@@ -68,6 +70,7 @@
   padding: 12px 16px;
   border-radius: 8px;
   cursor: pointer;
+  text-align: left;
 }
 
 .empty-list:hover {

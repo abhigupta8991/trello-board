@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { db } from "../../../firebase/config";
-import { ref, push, set, update } from "firebase/database";
+import { ref, push, set } from "firebase/database";
 import { addTaskToList } from "../../../firebase/crud";
 
 import "./modal.css";
@@ -51,7 +51,7 @@ const Modal = ({ isOpen, onClose, type, boardId, listId, taskId, modalIsForm = t
     <div className="modal-overlay">
       {
         modalIsForm ? <div className="modal-content">
-        <h2>{boardId ? "Edit" : "Add"} {type.charAt(0).toUpperCase() + type.slice(1)}</h2>
+        <h2>Add {type.charAt(0).toUpperCase() + type.slice(1)}</h2>
         <input
           type="text"
           className="modal-name"
@@ -77,8 +77,8 @@ const Modal = ({ isOpen, onClose, type, boardId, listId, taskId, modalIsForm = t
             onChange={(e) => setAssignee(e.target.value)}
           />
         )}
-        <button onClick={handleSubmit}>Save</button>
-        <button className="close-btn" onClick={handleClose}>Close</button>
+        <button className="button save-btn" onClick={handleSubmit}>Save</button>
+        <button className="button close-btn" onClick={handleClose}>Close</button>
       </div> : 
       <div className="modal-content">
         <div className="card-details">

@@ -25,9 +25,9 @@ const Card = ({ card, boardId, listId, onClick }) => {
         opacity: isDragging ? 0.5 : 1,
       }}>
         <h4>{card.name}</h4>
-        <span className='delete' onClick={deleteCardFromList}>
+        <button className='delete' onClick={deleteCardFromList}>
           <DeleteIcon/>
-        </span>
+        </button>
       </div>
     </div>
   )

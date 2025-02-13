@@ -61,7 +61,7 @@ const List = ({list, listId, boardId}) => {
             )
           })}
         </div>
-      <div className='add-card' onClick={() => openModal("card")}>+ Add a Card</div>
+      <button className='add-card' onClick={() => openModal("card")}>+ Add a Card</button>
       <Modal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
