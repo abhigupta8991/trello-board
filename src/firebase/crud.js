@@ -8,6 +8,7 @@ export const deleteCard = (boardId, listId, taskId) => {
     .catch((error) => console.error("Error deleting task:", error));
 };
 
+
 export const addTaskToList = async (boardId, listId, taskName, taskDescription, assignee) => {
     const taskRef = ref(db, `projects/${boardId}/lists/${listId}/tasks`);
     const newTaskRef = push(taskRef);
